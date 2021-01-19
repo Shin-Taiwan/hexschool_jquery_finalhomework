@@ -61,10 +61,29 @@
     padding: 5px;
 }
 
-.menubar a:hover{
+.menubar a:hover, .menubar a.active{
     border-bottom: 5px solid  rgb(81, 226, 146);
 }
 
+.pulldown_menu{
+    display: none;
+    position: absolute;
+    margin: 10px 20px ;
+    padding: 5px;
+    color: white;
+    z-index: 2;
+    background-color: rgba(0,0,0,0.3);
+}
+.pulldown_menu li{
+    margin-bottom: 5px;
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+.pulldown_menu li:hover{
+    cursor: pointer;
+    color: darkgreen;
+}
 /* content */
 .content{
     margin-bottom: 50px;
@@ -79,10 +98,16 @@
     font-size: 30px;
     color: white;
     background-color:rgba(0,0,0,0.3);
+    z-index: 2;
 }
 
 .banner{
     width: 100%;
+}
+
+.swiper-container {
+    width: 1024px;
+    height: 354px;
 }
 .courses{
     display: flex;
@@ -241,3 +266,17 @@ form .btn:hover{
     color: red;
 }
 
+
+/* toTop */
+
+.toTop{
+    position: fixed;
+    bottom: 10px;
+    right: 750px;
+}
+
+.toTop a{
+    text-decoration: none;
+    font-size: 40px;
+    color: teal;
+}

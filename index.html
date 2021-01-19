@@ -6,8 +6,11 @@
     <meta name="description" content="hexschool courses info">
     <meta name="keywords" content="hexschool,HTML5,jQuery,響應式網站">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="reset.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' />
+    <link rel="stylesheet" href="./css/lightbox.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>HexSchool Demo</title>
 </head>
 
@@ -22,25 +25,60 @@
         <div class="header">
             <a href="#" class="headerlink">link</a>
             <ul class="menubar">
-                <li><a href="#">首頁</a></li>
-                <li><a href="#">產品介紹</a></li>
-                <li><a href="#">聯絡我們</a></li>
+                <li>
+                    <a href="#">首頁</a>
+                </li>
+                <li>
+                    <a href="#" class="pulldown">產品介紹</a>
+                    <ul class="pulldown_menu">
+                        <li>HTML5</li>
+                        <li>jQuery教學</li>
+                        <li>RWD</li>
+                    </ul>
+                </li>
+                <li>
+                    <a href="#" class="pulldown">聯絡我們</a>
+                    <ul class="pulldown_menu">
+                        <li>Tel</li>
+                        <li>E-MAIL</li>
+                        <li>Facebook</li>
+                        <li>Twitter</li>
+                    </ul>
+                </li>
             </ul>
-        </div>
+        </div>      
         <div class="content">
-            <h1>六角學院<br>讓您奠定良好的前端基礎</h1>
-            <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
-                alt="banner" class="banner">
+            <h1 >六角學院<br>讓您奠定良好的前端基礎</h1>
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
+                        alt="banner" class="banner swiper-slide">
+                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
+                        alt="banner" class="banner swiper-slide">
+                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
+                        alt="banner" class="banner swiper-slide">
+                </div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+
             <ul class="courses">
                 <li class="course_item">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
-                        alt="html_logo">
+                    <a class="example-image-link"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
+                        data-lightbox="course-1"><img class="example-image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/html.png"
+                            alt="html_logo" /></a>
+
                     <h2>HTML5 基礎教學</h2>
                     <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法</p>
                 </li>
                 <li class="course_item">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
-                        alt="jquery_logo">
+                    <a class="example-image-link"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
+                        data-lightbox="course-2"><img class="example-image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/jQuery.png"
+                            alt="jquery_logo" /></a>
                     <h2>jQuery教學</h2>
                     <p>本課程有以下特色</p>
                     <ul>
@@ -50,8 +88,11 @@
                     </ul>
                 </li>
                 <li class="course_item">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
-                        alt="rwd_logo">
+                    <a class="example-image-link"
+                        href="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
+                        data-lightbox="course-3"><img class="example-image"
+                            src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/rwd.png"
+                            alt="rwd_logo" /></a>
                     <h2>響應式網站設計</h2>
                     <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
                 </li>
@@ -125,7 +166,19 @@
                 <li>電話：<span class="danger">07-1223567</span></li>
             </ul>
         </div>
+
+        <div class="toTop">
+            <a href="#" class="fas fa-sort-up"></a>
+        </div>
+
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./js/lightbox-plus-jquery.min.js"></script>
+    <script src="js/all.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
