@@ -6,7 +6,6 @@
     <meta name="description" content="hexschool courses info">
     <meta name="keywords" content="hexschool,HTML5,jQuery,響應式網站">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/reset.css">
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' />
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -48,15 +47,17 @@
             </ul>
         </div>      
         <div class="content">
-            <h1 >六角學院<br>讓您奠定良好的前端基礎</h1>
             <div class="swiper-container">
                 <div class="swiper-wrapper">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
-                        alt="banner" class="banner swiper-slide">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
-                        alt="banner" class="banner swiper-slide">
-                    <img src="https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png"
-                        alt="banner" class="banner swiper-slide">
+                    <div class="banner swiper-slide">
+                        <h1>六角學院<br>讓您奠定良好的前端基礎</h1>
+                    </div>
+                    <div class="banner swiper-slide">
+                        <h1>六角學院<br>讓您奠定良好的前端基礎</h1>
+                    </div>
+                    <div class="banner swiper-slide">
+                        <h1>六角學院<br>讓您奠定良好的前端基礎</h1>
+                    </div>
                 </div>
                 <div class="swiper-button-prev"></div>
                 <div class="swiper-button-next"></div>
@@ -142,10 +143,10 @@
                     <td>板書</td>
                 </tr>
             </table>
-            <form action="index.html">
+            <form action="index.html" class="infoform">
                 <h2>對我們的課程有興趣嗎？<br> 歡迎留下你的資料</h2>
                 <div class="wrap">
-                    <textarea name="content" id="" cols="65" rows="11" placeholder="請輸入想詢問的内容"></textarea>
+                    <textarea name="content" cols="65" rows="11" placeholder="請輸入想詢問的内容"></textarea>
                     <div class="item">
                         <label for="username">姓名</label>
                         <input type="text" name="username" placeholder="請輸入姓名" id="username">
@@ -177,7 +178,6 @@
         integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc=" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="./js/lightbox-plus-jquery.min.js"></script>
-    <script src="js/all.js"></script>
     <script src="js/script.js"></script>
 </body>
 

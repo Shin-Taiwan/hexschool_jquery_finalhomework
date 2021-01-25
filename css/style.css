@@ -1,3 +1,52 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 /* common */
 .wrap{
     margin: 0 auto;
@@ -102,7 +151,8 @@
 }
 
 .banner{
-    width: 100%;
+    background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/banner.png) no-repeat; 
+    background-size:cover;
 }
 
 .swiper-container {
@@ -172,7 +222,7 @@
 
 /* form */
 
-form{
+.infoform{
     width: 100%;
     background:linear-gradient(#01534a,#009872);
     margin-top: 55px;
@@ -180,46 +230,46 @@ form{
     color: white;
 }
 
-form h2{ 
+.infoform h2{ 
     text-align: center;
     font-size: 25px;
     line-height: 1.5;
 }
 
-form .wrap{
+.infoform .wrap{
     display: flex;
     justify-content: space-evenly;
     margin-top: 30px;
 }
-form label , form .btn{
+.infoform label , .infoform .btn{
     font-size: 15px;
     display: block;
 }
-form label{  
+.infoform label{  
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-input[type="text"],input[type="tel"],input[type="email"] {
+.infoform input[type="text"],.infoform input[type="tel"],.infoform input[type="email"] {
     width: 455px;
     padding: 5px;
     box-shadow: 0 0 15px gray;
     border-radius: 5px;
 }
 
-input:focus{
+.infoform input:focus{
     background-color: darkseagreen;
 }
-textarea{
+.infoform textarea{
     margin-top: 10px;
     box-shadow: 0 0 15px gray;
     border-radius: 5px;
 }
-textarea:focus{
+.infoform textarea:focus{
     background-color: darkseagreen;
 }
 
-form .btn{
+.infoform .btn{
     display: block;
     margin-top: 15px;
     background-color: #00cc99;
@@ -231,7 +281,7 @@ form .btn{
     margin-left: 400px;
 }
 
-form .btn:hover{
+.infoform .btn:hover{
     color: darkgreen;
     cursor: pointer;
 }
@@ -271,12 +321,19 @@ form .btn:hover{
 
 .toTop{
     position: fixed;
-    bottom: 10px;
-    right: 750px;
+    /* bottom: 10px;
+    right: 750px; */
+    bottom: 0;
+    right: 0;
+    display: none;
 }
 
 .toTop a{
     text-decoration: none;
-    font-size: 40px;
+    font-size: 100px;
     color: teal;
+}
+
+.toTop a:hover{
+    color: #00cc99;
 }
