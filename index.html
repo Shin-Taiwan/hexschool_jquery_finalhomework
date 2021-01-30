@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="description" content="hexschool courses info">
     <meta name="keywords" content="hexschool,HTML5,jQuery,響應式網站">
+    <link rel="shortcut icon" href="https://www.hexschool.com/favicon.ico" type="image/x-icon">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:title" content="HexSchool Demo website" />
+    <meta property="og:description" content="HexSchool Demo website By Shin">
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="網址" />
+
+
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css' />
     <link rel="stylesheet" href="./css/lightbox.css">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
@@ -22,7 +31,7 @@
                     alt="twitterIcon"><a href="#"><span class="twittercolor">追蹤我們</span></a></li>
         </ul>
         <div class="header">
-            <a href="#" class="headerlink">link</a>
+            <h3><a href="#" class="headerlink">六角學院</a></h3>
             <ul class="menubar">
                 <li>
                     <a href="#">首頁</a>
@@ -98,70 +107,76 @@
                     <p>主流前端網站設計的基礎就在六角學院，在這裡不再是填鴨式教學，而是透過實際的範例，了解正確的網站開發流程，講師均具有業界開發經驗，讓學員學習業界主流的開發方法。</p>
                 </li>
             </ul>
-            <h2 class="table_title">線上及實體課程的差異</h2>
-            <table class="comparison_table">
-                <tr>
-                    <th>項目</th>
-                    <th>Hex School 線上課程</th>
-                    <th>一般線上課程</th>
-                    <th>實體課程</th>
-                </tr>
-                <tr>
-                    <td>費用</td>
-                    <td><span class="green">較低</span></td>
-                    <td><span class="green">較低</span></td>
-                    <td>較高</td>
-                </tr>
-                <tr>
-                    <td>學習效果</td>
-                    <td>一般</td>
-                    <td><span class="green">較低</span></td>
-                    <td><span class="green">很好</span></td>
-                </tr>
-                <tr>
-                    <td>Code review</td>
-                    <td>有</td>
-                    <td>無</td>
-                    <td>不一定</td>
-                </tr>
-                <tr>
-                    <td>課程更新速度</td>
-                    <td><span class="green">普通</span></td>
-                    <td><span class="green">普通</span></td>
-                    <td>較慢</td>
-                </tr>
-                <tr>
-                    <td>多次複習</td>
-                    <td><span class="green">可</span></td>
-                    <td>可</td>
-                    <td>不可</td>
-                </tr>
-                <tr>
-                    <td>字幕</td>
-                    <td><span class="green">有</span></td>
-                    <td>不一定</td>
-                    <td>板書</td>
-                </tr>
-            </table>
+            <div class="table_container">
+                <h2 class="table_title">線上及實體課程的差異</h2>
+                <table class="comparison_table">
+                    <tr>
+                        <th>項目</th>
+                        <th>Hex School 線上課程</th>
+                        <th>一般線上課程</th>
+                        <th>實體課程</th>
+                    </tr>
+                    <tr>
+                        <td>費用</td>
+                        <td><span class="green">較低</span></td>
+                        <td><span class="green">較低</span></td>
+                        <td>較高</td>
+                    </tr>
+                    <tr>
+                        <td>學習效果</td>
+                        <td>一般</td>
+                        <td><span class="green">較低</span></td>
+                        <td><span class="green">很好</span></td>
+                    </tr>
+                    <tr>
+                        <td>Code review</td>
+                        <td>有</td>
+                        <td>無</td>
+                        <td>不一定</td>
+                    </tr>
+                    <tr>
+                        <td>課程更新速度</td>
+                        <td><span class="green">普通</span></td>
+                        <td><span class="green">普通</span></td>
+                        <td>較慢</td>
+                    </tr>
+                    <tr>
+                        <td>多次複習</td>
+                        <td><span class="green">可</span></td>
+                        <td>可</td>
+                        <td>不可</td>
+                    </tr>
+                    <tr>
+                        <td>字幕</td>
+                        <td><span class="green">有</span></td>
+                        <td>不一定</td>
+                        <td>板書</td>
+                    </tr>
+                </table>
+            </div>
+            
             <form action="index.html" class="infoform">
                 <h2>對我們的課程有興趣嗎？<br> 歡迎留下你的資料</h2>
                 <div class="wrap">
-                    <textarea name="content" cols="65" rows="11" placeholder="請輸入想詢問的内容"></textarea>
+                    <textarea class="question" name="content" cols="65" rows="11" placeholder="請輸入想詢問的内容"></textarea>
                     <div class="item">
-                        <label for="username">姓名</label>
+                        <label for="username" class="username">姓名</label>
                         <input type="text" name="username" placeholder="請輸入姓名" id="username">
-                        <label for="tel">電話</label>
+                        <label for="tel" class="tel">電話</label>
                         <input type="tel" name="tel" placeholder="請輸入電話" id="tel">
-                        <label for="email">信箱</label>
+                        <label for="email" class="email">信箱</label>
                         <input type="email" name="email" placeholder="請輸入信箱" id="email">
-                        <input type="submit" value="送出" class="btn">
+                        <div class="btn_container">
+                            <input type="submit" value="送出" class="btn">
+                        </div>
                     </div>
                 </div>
             </form>
         </div>
 
         <div class="footer">
-            <a href="#" class="footerlink">link</a>
+            <h3><a href="#" class="footerlink">六角學院</a></h3>
+            
             <ul>
                 <li>聯絡我們：<span class="danger">test@gmail.com</span></li>
                 <li>電話：<span class="danger">07-1223567</span></li>

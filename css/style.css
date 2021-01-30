@@ -88,6 +88,7 @@ table {
     display: block;
     background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/logo.png) no-repeat ;
     width: 200px;
+    height: 100%;
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap;
@@ -104,6 +105,7 @@ table {
 }
 
 .menubar a{
+    display: block;
     text-decoration: none;
     color: rgb(81, 226, 146);
     margin: 0px 20px ;
@@ -193,16 +195,22 @@ table {
 }
 
 /* table */
+
+.table_container{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
 .table_title{
     margin-top: 70px;
-    margin-bottom: 30px;
+    margin-bottom: 30px; 
     font-size: 25px;
     text-align: center;
 }
 .comparison_table{
-    width: 840px;
-    margin: 0 auto;
     font-size: 15px;
+    width: 840px;
     text-align: left;
 }
 .comparison_table th, .comparison_table td{
@@ -223,7 +231,6 @@ table {
 /* form */
 
 .infoform{
-    width: 100%;
     background:linear-gradient(#01534a,#009872);
     margin-top: 55px;
     padding: 40px 15px 25px 20px;
@@ -241,34 +248,43 @@ table {
     justify-content: space-evenly;
     margin-top: 30px;
 }
-.infoform label , .infoform .btn{
+
+.infoform .wrap .item{
+    padding-right: 10px;
+}
+.infoform .username,.infoform .tel, .infoform .email, .infoform .btn{
     font-size: 15px;
     display: block;
 }
-.infoform label{  
+.infoform .username,.infoform .tel, .infoform .email{  
     margin-top: 10px;
     margin-bottom: 5px;
 }
 
-.infoform input[type="text"],.infoform input[type="tel"],.infoform input[type="email"] {
+.infoform #username,.infoform #tel,.infoform #email{
     width: 455px;
     padding: 5px;
     box-shadow: 0 0 15px gray;
     border-radius: 5px;
 }
 
-.infoform input:focus{
+.infoform #username:focus,.infoform #tel:focus,.infoform #email:focus,.infoform .btn:focus{
     background-color: darkseagreen;
 }
-.infoform textarea{
+.infoform .question{
     margin-top: 10px;
     box-shadow: 0 0 15px gray;
     border-radius: 5px;
+    width: 485px;
 }
-.infoform textarea:focus{
+.infoform .question:focus{
     background-color: darkseagreen;
 }
 
+.infoform .wrap .item .btn_container{
+    display: flex;
+    justify-content: flex-end;
+}
 .infoform .btn{
     display: block;
     margin-top: 15px;
@@ -278,7 +294,7 @@ table {
     border: 0px;
     box-shadow: 0 0 15px gray;
     border-radius: 5px;
-    margin-left: 400px;
+    width: 60px;
 }
 
 .infoform .btn:hover{
@@ -299,6 +315,7 @@ table {
     display: block;
     background: url(https://raw.githubusercontent.com/hexschool/HTMLHWSource/master/singlePage/footerLogo.png) no-repeat ;
     width: 200px;
+    height: 100%;
     text-indent: 101%;
     overflow: hidden;
     white-space: nowrap;
